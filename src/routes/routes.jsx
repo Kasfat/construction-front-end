@@ -6,6 +6,10 @@ import Services from "../components/frontnend/Pages/Services";
 import Projects from "../components/frontnend/Pages/Projects";
 import Blogs from "../components/frontnend/Pages/Blogs";
 import ContactUs from "../components/frontnend/Pages/ContactUs";
+import Login from "../components/backend/pages/login";
+import Dashboard from "../components/backend/pages/Dashboard";
+import ProtectedRoute from "../components/backend/ProtectedRoute";
+import { AuthProvider } from "../context/AuthContext";
 
 export const routes = createBrowserRouter([
   {
@@ -35,6 +39,18 @@ export const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/admin/login",
+        element: <Login />,
+      },
+      {
+        path: "/admin/dashboard",
+        element: (
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

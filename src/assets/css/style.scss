@@ -310,3 +310,34 @@ footer{
     }
 }
 
+
+.login-form{
+    .card{
+        width: 450px;
+    }
+}
+
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
+
+
+.sidebar{
+    ul{
+        li{
+            
+            a{
+                color: $text-color;
+                display: block;
+                padding: 10px 0;
+                font-size: 1.2em;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
